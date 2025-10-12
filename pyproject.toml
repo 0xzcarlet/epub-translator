@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "epub-translator"
+version = "0.1.0"
+description = "CLI tool to translate EPUB books from English to Indonesian"
+authors = [{ name = "Your Name" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "beautifulsoup4",
+    "ebooklib",
+    "torch",
+    "transformers",
+    "sentencepiece",
+]
+
+[project.scripts]
+epub-translator = "epub_translator.cli:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
