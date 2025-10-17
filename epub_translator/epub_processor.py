@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import logging
 from pathlib import Path
-from typing import Iterable, List, Optional
+from typing import Iterable, List
 
 import ebooklib
 from bs4 import BeautifulSoup, NavigableString
@@ -14,17 +14,6 @@ from .translator import HuggingFaceTranslator
 
 LOGGER = logging.getLogger(__name__)
 SKIP_TAGS = {"script", "style"}
-
-
-def _get_first_metadata(book: epub.EpubBook, namespace: str, name: str) -> Optional[str]:
-    try:
-        entries = book.get_metadata(namespace, name)
-    except AttributeError:
-        return None
-    if not entries:
-        return None
-    value, _attrs = entries[0]
-    return value
 
 
 def _iter_text_nodes(soup: BeautifulSoup) -> Iterable[NavigableString]:
@@ -88,9 +77,9 @@ class EPUBTranslator:
             self.translate_item(item)
 
         if add_metadata:
-            identifier = _get_first_metadata(book, "DC", "identifier") or input_path.stem
+            identifier = book.get_identifier() or input_path.stem
             book.set_identifier(f"{identifier}-translated")
-            title = _get_first_metadata(book, "DC", "title") or input_path.stem
+            title = book.get_title() or input_path.stem
             book.set_title(f"{title} (ID Translation)")
             book.set_language("id")
 

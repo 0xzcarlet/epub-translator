@@ -12,6 +12,7 @@ bisa tetap dipertahankan apa adanya.
 - Pengaturan batch size dan panjang maksimum token untuk mengontrol proses inferensi.
 - Penambahan metadata sederhana pada EPUB hasil terjemahan.
 
+## Instalasi
 ## Mulai dari Git Clone
 
 Ikuti langkah berikut jika Anda ingin memulai dari repositori Git:
@@ -39,6 +40,9 @@ Ikuti langkah berikut jika Anda ingin memulai dari repositori Git:
 
    > **Catatan:** dependensi `torch` cukup besar. Anda bisa memilih versi yang sesuai dengan
    > perangkat keras dengan mengikuti panduan [PyTorch](https://pytorch.org/).
+
+
+
 
 ## Penggunaan
 
