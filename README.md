@@ -13,9 +13,26 @@ bisa tetap dipertahankan apa adanya.
 - Penambahan metadata sederhana pada EPUB hasil terjemahan.
 
 ## Instalasi
+## Mulai dari Git Clone
 
-1. Pastikan Python 3.10+ sudah terpasang.
-2. Instal dependencies menggunakan `pip`:
+Ikuti langkah berikut jika Anda ingin memulai dari repositori Git:
+
+1. Clone repositori ini dan masuk ke dalam direktori proyek:
+
+   ```bash
+   git clone https://github.com/<username>/epub-translator.git
+   cd epub-translator
+   ```
+
+2. (Opsional) Buat dan aktifkan virtual environment agar dependensi terisolasi:
+
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # Linux/macOS
+   .venv\Scripts\activate    # Windows PowerShell
+   ```
+
+3. Instal dependensi menggunakan `pip`:
 
    ```bash
    pip install .
@@ -23,6 +40,9 @@ bisa tetap dipertahankan apa adanya.
 
    > **Catatan:** dependensi `torch` cukup besar. Anda bisa memilih versi yang sesuai dengan
    > perangkat keras dengan mengikuti panduan [PyTorch](https://pytorch.org/).
+
+
+
 
 ## Penggunaan
 
