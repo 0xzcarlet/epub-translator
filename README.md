@@ -12,26 +12,10 @@ bisa tetap dipertahankan apa adanya.
 - Pengaturan batch size dan panjang maksimum token untuk mengontrol proses inferensi.
 - Penambahan metadata sederhana pada EPUB hasil terjemahan.
 
-## Mulai dari Git Clone
+## Instalasi
 
-Ikuti langkah berikut jika Anda ingin memulai dari repositori Git:
-
-1. Clone repositori ini dan masuk ke dalam direktori proyek:
-
-   ```bash
-   git clone https://github.com/<username>/epub-translator.git
-   cd epub-translator
-   ```
-
-2. (Opsional) Buat dan aktifkan virtual environment agar dependensi terisolasi:
-
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate  # Linux/macOS
-   .venv\Scripts\activate    # Windows PowerShell
-   ```
-
-3. Instal dependensi menggunakan `pip`:
+1. Pastikan Python 3.10+ sudah terpasang.
+2. Instal dependencies menggunakan `pip`:
 
    ```bash
    pip install .
